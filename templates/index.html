@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A practical Flask delivery platform for dependable DevOps workflows.">
+    <title>Pulse Deploy | Flask Delivery Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="page-shell">
+        <nav class="navbar" aria-label="Primary navigation">
+            <a class="brand" href="{{ url_for('home') }}">
+                <span class="brand-mark">P</span>
+                <span>Pulse Deploy</span>
+            </a>
+            <div class="nav-links">
+                <a href="#capabilities">Capabilities</a>
+                <a href="#workflow">Workflow</a>
+                <a class="nav-button" href="{{ url_for('health') }}">System health <span aria-hidden="true">↗</span></a>
+            </div>
+        </nav>
+
+        <main>
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="pulse-dot"></span> Delivery pipeline online</p>
+                    <h1 id="hero-title">Ship with <em>confidence.</em></h1>
+                    <p class="hero-lede">A focused Flask service for teams who want every commit to move cleanly from code to production.</p>
+                    <div class="hero-actions">
+                        <a class="primary-button" href="#capabilities">Explore the platform <span aria-hidden="true">↓</span></a>
+                        <a class="text-link" href="{{ url_for('health') }}">Check live status <span aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+                <div class="hero-panel" aria-label="Deployment status summary">
+                    <div class="panel-topline"><span>Production overview</span><span class="live-label"><span class="pulse-dot"></span> Live</span></div>
+                    <div class="metric-value">99.98<span>%</span></div>
+                    <p class="metric-label">deployment reliability</p>
+                    <div class="chart" aria-hidden="true">
+                        <span style="height: 34%"></span><span style="height: 48%"></span><span style="height: 42%"></span><span style="height: 61%"></span><span style="height: 56%"></span><span style="height: 76%"></span><span style="height: 70%"></span><span style="height: 88%"></span><span style="height: 82%"></span><span style="height: 96%"></span>
+                    </div>
+                    <div class="panel-footer"><span>Last 10 deploys</span><strong>+12.4%</strong></div>
+                </div>
+            </section>
+
+            <section class="section-block" id="capabilities" aria-labelledby="capabilities-title">
+                <div class="section-heading">
+                    <p class="eyebrow">Built for momentum</p>
+                    <h2 id="capabilities-title">The essentials for a<br><em>healthy delivery loop.</em></h2>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card feature-card-dark">
+                        <div class="card-icon">01</div>
+                        <h3>Clear by design</h3>
+                        <p>Simple service boundaries make it easy to understand, test, and operate on any Ubuntu host.</p>
+                        <span class="card-arrow" aria-hidden="true">↗</span>
+                    </article>
+                    <article class="feature-card feature-card-light">
+                        <div class="card-icon">02</div>
+                        <h3>Ready to automate</h3>
+                        <p>Jenkins can install, test, and restart the service on every trusted change with one repeatable flow.</p>
+                        <span class="card-arrow" aria-hidden="true">↗</span>
+                    </article>
+                    <article class="feature-card feature-card-accent">
+                        <div class="card-icon">03</div>
+                        <h3>Always observable</h3>
+                        <p>A lightweight health endpoint gives load balancers, Jenkins, and operators a fast signal.</p>
+                        <span class="card-arrow" aria-hidden="true">↗</span>
+                    </article>
+                </div>
+            </section>
+
+            <section class="workflow" id="workflow" aria-labelledby="workflow-title">
+                <div>
+                    <p class="eyebrow">The release rhythm</p>
+                    <h2 id="workflow-title">Small steps.<br><em>Strong signal.</em></h2>
+                </div>
+                <div class="workflow-steps">
+                    <div class="workflow-step"><span>01</span><div><strong>Commit</strong><p>Push a focused change to the main branch.</p></div></div>
+                    <div class="workflow-step"><span>02</span><div><strong>Validate</strong><p>Jenkins installs dependencies and runs the test suite.</p></div></div>
+                    <div class="workflow-step"><span>03</span><div><strong>Release</strong><p>Systemd restarts the service and health confirms it is ready.</p></div></div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="brand"><span class="brand-mark">P</span><span>Pulse Deploy</span></div>
+            <p>Reliable delivery, one clean commit at a time.</p>
+            <span class="footer-status"><span class="pulse-dot"></span> Service healthy</span>
+        </footer>
+    </div>
+</body>
+</html>
